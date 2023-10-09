@@ -1,0 +1,184 @@
+/* Reset de estilos básicos */
+/* Isso redefine as margens e preenchimentos padrão para todos os elementos principais do HTML. É uma prática comum para garantir consistência. */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos gerais para dispositivos móveis */
+/* Aqui começamos com estilos gerais para dispositivos móveis. */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #4e3150;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    align-items: center;
+}
+
+header {
+    background-color: #b6789a;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    height: 15vh;
+}
+
+p {
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    border: 1px;
+    font-size: 20px;
+}
+
+h2 {
+    color: #ffffff;
+    text-align: center;
+    margin: 20px;
+    font-size: 30px;
+
+}
+
+.sobre-mim {
+    padding: 20px;
+    margin-left: 400px;
+    margin-right: 400px;
+   
+}
+
+.skills {
+    background-color: #4e3150;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    
+}
+
+.ski img {
+   
+    height: 90px;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start; /* Para alinhar os elementos ao topo */
+    padding: 20px;
+}
+
+.sobre {
+    align-items:center;
+    text-align:left;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 10px;
+    margin: 20px;
+    padding: 10px;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px; /* Adicionado espaçamento entre o nome e a imagem */
+}
+
+header img {
+    max-width:10%;
+    height: auto;
+    margin-bottom: 10px; /* Adicionado espaçamento entre a imagem e os links */
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 10px; /* Adicionado espaçamento acima dos links */
+}
+
+nav ul li {
+    margin-bottom: 10px; /* Adicionado espaçamento entre os itens de menu */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+}
+#portfolio {
+    color: #ffffff;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr; /* Alterado para uma coluna em dispositivos móveis */
+    gap: 20px;
+    max-width: 100%; /* Alterado para ocupar a largura total */
+    padding: 20px;
+}
+
+.projeto {
+    display: grid;
+    grid-template-columns: 1fr; /* Uma coluna em dispositivos móveis */
+    gap: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.projeto img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #a53596;
+    padding: 10px;
+    box-shadow: 0 2px 4px #b7bea4;
+    gap: 60px;
+    display: grid;
+}
+
+footer {
+    background-color: #b6789a;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Regras de mídia para telas maiores */
+/* Aqui aplicamos regras de mídia para estilos de tela maiores, a partir de 768px. */
+
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 16px; /* Aumente o tamanho da fonte para telas maiores */
+    }
+
+    header {
+        flex-direction: row; /* Alinha os elementos em linha para telas maiores */
+        justify-content: space-between; /* Alinha o nome à esquerda e os links à direita */
+        text-align: left; /* Alinha o texto dos links à esquerda */
+    }
+
+    header img {
+        margin-bottom: 0; /* Remova o espaçamento entre a imagem e os links */
+    }
+}
+
+    nav ul li {
+        display: inline; /* Restaure o layout horizontal para telas maiores */
+        margin-bottom: 0; /* Remova o espaçamento entre os itens de menu */
+    }
+
+    #portfolio {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Restaure o layout em grade */
+        max-width: 1200px; /* Restaure a largura máxima */
+        margin: 0 auto;
+    }
+
+    .projeto {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Restaure o layout em grade */
+    }
